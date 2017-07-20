@@ -1,0 +1,338 @@
+@charset "UTF-8";
+@import url(https:/fonts.googleapis.com/css?family=PT+Serif:400,700&subset=latin,cyrillic);
+@font-face {
+    font-family: 'panton';
+    src: url('../fonts/panton-regular-webfont.eot');
+    src: url('../fonts/panton-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/panton-regular-webfont.woff2') format('woff2'), url('../fonts/panton-regular-webfont.woff') format('woff'), url('../fonts/panton-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+@font-face {
+    font-family: 'panton';
+    src: url('../fonts/panton-semibold-webfont.eot');
+    src: url('../fonts/panton-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/panton-semibold-webfont.woff2') format('woff2'), url('../fonts/panton-semibold-webfont.woff') format('woff'), url('../fonts/panton-semibold-webfont.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal
+}
+@font-face {
+    font-family: 'panton';
+    src: url('../fonts/panton-bold-webfont.eot');
+    src: url('../fonts/panton-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/panton-bold-webfont.woff2') format('woff2'), url('../fonts/panton-bold-webfont.woff') format('woff'), url('../fonts/panton-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal
+}
+@font-face {
+    font-family: 'panton';
+    src: url('../fonts/panton-light-webfont.eot');
+    src: url('../fonts/panton-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/panton-light-webfont.woff2') format('woff2'), url('../fonts/panton-light-webfont.woff') format('woff'), url('../fonts/panton-light-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal
+}
+* {
+    box-sizing: border-box;
+}
+.no-padding-left {
+    padding-left: 0;
+}
+.no-margin-left {
+    margin-left: 0;
+}
+.full-width {
+    width: 100%;
+}
+body {
+    font-family: Panton, sans-serif;
+}
+.container,
+.small-container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.clear::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.upper-grey-line {
+    background-color: #f1f0f0;
+    padding: 10px 0;
+}
+.green-line {
+    background-color: #8dc63f;
+    padding: 5px 0;
+    position: relative;
+}
+.green-line:before {
+    content: '';
+    position: absolute;
+    top: -9px;
+    right: 50px;
+    background-color: #8dc63f;
+    border: 5px solid #fff;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+header {
+    background-color: #28211f;
+    color: #fff;
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+header>div {
+    width: 50%;
+    float: left;
+    flex-grow: 1;
+    flex-basis: 50%;
+}
+header>div:first-of-type {
+    padding-left: 50px;
+}
+header>div:nth-of-type(2) {
+    padding-right: 50px;
+    display: flex;
+    justify-content: right;
+    align-items: center
+}
+header>div:nth-of-type(2)>div {
+    float: right;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center
+}
+header>div:nth-of-type(2)>div>span {
+    font-weight: bold;
+    margin-left: 5px;
+}
+h1 {
+    font-size: 30px;
+    color: #28211f;
+    padding: 60px 0 60px 55px;
+    background-color: #f1f0f0;
+    margin: 0 0 20px 0;
+    font-weight: normal;
+}
+.small-container h2 {
+    color: #8dc63f;
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    font-weight: normal;
+}
+p {
+    font-size: 16px;
+    color: #5b5b5b;
+    margin-top: 0;
+    font-weight: bold;
+}
+.small-container p a {
+    color: #e28023;
+    text-decoration: none;
+}
+.small-container p a:hover {
+    text-decoration: none;
+    color: #e28023;
+}
+.partners-grid div,
+.partners-grid p {
+    width: 50%;
+    float: left;
+}
+.partners-grid div {
+    position: relative;
+    top: -34px;
+}
+.partners-grid div div {
+    text-align: center;
+    width: 50%;
+}
+.partners-grid div img {
+    float: right;
+    width: 30%;
+}
+.partners-grid div img:nth-of-type(2) {
+    width: 25%;
+    margin-top: -14px;
+    margin-right: 10px;
+}
+.logos-on-small {
+    display: block;
+}
+.logos-on-small>div {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.logos-on-small>div img {
+    width: 50%;
+}
+.logos-on-small div:nth-of-type(2) img {
+    position: relative;
+    top: -25px;
+}
+form {
+    background-color: #f1f0f0;
+    padding: 40px;
+}
+.form-group {
+    margin-bottom: 15px;
+    float: right;
+    width: 100%;
+    position: relative;
+}
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    float: right;
+    width: 100%;
+    height: 50px;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+    border-bottom: 2px solid #c7c7c7;
+    margin-top: 5px;
+    transition: all 0.2s;
+    outline: none;
+    padding: 0 40px 0 5px;
+}
+.error {
+    border: 3px solid #f44336 !important;
+}
+.text-right {
+    text-align: right;
+}
+.form-wrap {
+    margin-left: 30%;
+    width: 70%;
+    padding-bottom: 78px;
+}
+.mail-group:before {
+    content: 'Email adress';
+}
+.pass-group:before {
+    content: 'Password';
+}
+.confirm-group:before {
+    content: 'Confirm password';
+}
+.mobile-grid:before {
+    content: 'Mobile number';
+}
+.form-group:before {
+    width: 184px;
+    text-align: right;
+    font-size: 16px;
+    color: #5b5b5b;
+    margin-top: 0;
+    font-weight: bold;
+    position: absolute;
+    top: 13px;
+    left: -209px;
+}
+.mobile-grid div {
+    width: 50%;
+    float: left;
+}
+.mobile-grid button {
+    width: 90%;
+    margin-left: 10%;
+    height: 50px;
+    border: 3px solid #e28023;
+    color: #e28023;
+    background-color: transparent;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+.mobile-grid button:hover {
+    background-color: #e28023;
+    color: #fff;
+}
+.checkbox-label {
+    display: inline;
+    cursor: pointer;
+}
+.regular-checkbox {
+    display: none;
+}
+.regular-checkbox + .checkbox-label {
+    background-color: #fff;
+    border-bottom: 2px solid #c7c7c7;
+    padding: 20px;
+    display: inline-block;
+    position: relative;
+}
+.regular-checkbox + .checkbox-label:active,
+.regular-checkbox:checked + .checkbox-label:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.regular-checkbox:checked + .checkbox-label {
+    background-color: #fff;
+    color: #99a1a7;
+}
+.regular-checkbox:checked + .checkbox-label:after {
+    content: '\2714';
+    font-size: 30px;
+    position: absolute;
+    top: 0px;
+    left: 9px;
+    color: #99a1a7;
+}
+.after-checkbox {
+    font-size: 16px;
+    color: #5b5b5b;
+    margin-top: 0;
+    font-weight: normal;
+    display: inline-block;
+    position: relative;
+    top: -14px;
+    margin-left: 10px;
+}
+.submit-wrap {
+    margin-left: 30%;
+    width: 70%;
+    text-align: right;
+}
+.submit-wrap input {
+    width: 45%;
+    height: 50px;
+    background-color: #f0c397;
+    border: none;
+    border-top: 3px solid #f2cfae;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    outline: none;
+    cursor: not-allowed;
+}
+.submit-wrap input.ready {
+    background-color: #e28023;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.submit-wrap input.ready:hover {
+    border: 3px solid #e28023;
+    color: #e28023;
+    background-color: transparent;
+}
+.normal-label {
+    font-size: 16px;
+    color: #5b5b5b;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.show-pass {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    height: 50px;
+    padding-top: 14px;
+    color: #e28023;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ezbob</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+<div class="container">
+    <div class="upper-grey-line"></div>
+    <div class="upper-header">
+        <div class="green-line">
+
+        </div>
+        <header>
+            <div>
+                <img src="images/Logo.png" alt="">
+            </div>
+            <div>
+                <div>
+                    <img src="images/phone-icon.png" alt=""><span>0895453455</span>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="clear"></div>
+    <h1>
+        Register account
+    </h1>
+</div>
+<div class="small-container">
+
+    <h2>Apply in just 10 minutes</h2>
+    <div class="partners-grid">
+        <p>It's quick and easy to apply for a business loan. We just need a few details before we can make a loan decision.
+        </p>
+        <div class="hidden-xs hidden-sm">
+
+            <img src="images/truste.png" alt="">
+            <img src="images/norton.png" alt="">
+
+
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="hidden-lg hidden-md logos-on-small">
+
+        <div>
+            <img src="images/truste.png" alt="">
+        </div>
+        <div>
+            <img src="images/norton.png" alt="">
+        </div>
+
+
+    </div>
+    <p>To start the process we need you to first register to create a Customer Account. If you would like to know more about how we collect and
+        <br> use your data, please see our
+        <a href="#">Privacy Policy</a>.
+    </p>
+
+    <form id="app">
+        <h2>Your details</h2>
+        <div class="form-wrap">
+            <div class="form-group mail-group">
+                <label class="normal-label hidden-lg hidden-md" for="mail">Email address</label>
+                <input v-on:change="changeMail()" v-bind:class="{ error: checkMail()}" v-model="mail" id="mail" type="text">
+            </div>
+            <div class="clear"></div>
+            <div class="form-group pass-group">
+                <label class="normal-label hidden-lg hidden-md" for="pass">Password</label>
+                <template v-if="typePass">
+                    <input  v-on:change="changePass()" v-bind:class="{ error: checkPass()}" v-model="pass" id="pass" type="text">
+                </template>
+                <template v-else>
+                    <input  v-on:change="changePass()" v-bind:class="{ error: checkPass()}" v-model="pass" id="pass" type="password">
+                </template>
+                <span @click="hidePass()" class="show-pass">{{showHidePass}}</span>
+            </div>
+            <div class="clear"></div>
+            <div class="form-group confirm-group">
+                <label class="normal-label hidden-lg hidden-md" for="confirm">Confirm password</label>
+                <template v-if="typeConfirm">
+                    <input v-on:change="changeConfirm()" v-bind:class="{ error: checkConfirm()}" v-model="confirm" id="confirm" type="text">
+                </template>
+                <template v-else>
+                    <input v-on:change="changeConfirm()" v-bind:class="{ error: checkConfirm()}" v-model="confirm" id="confirm" type="password">
+                </template>
+                <span @click="hideConfirm()" class="show-pass">{{showHideConfirm}}</span>
+            </div>
+            <div class="clear"></div>
+            <div class="form-group mobile-grid">
+                <div>
+                    <label class="normal-label hidden-lg hidden-md" for="mobile">Mobile number</label>
+                    <input v-on:change="changePhone()" v-bind:class="{ error: checkPhone()}" v-model="phone" id="mobile" type="text">
+                </div>
+
+                <div class="text-right">
+                    <button>
+                        Send authentication code
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+
+                <input v-model="checkbox" type="checkbox" id="checkbox-1-1" class="regular-checkbox" /><label class="checkbox-label" for="checkbox-1-1"></label> <span class="after-checkbox">Your business has an annual turnover of <strong>at least £100,000.</strong></span>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="submit-wrap">
+            <input v-on:click.prevent="onSubmit()" v-bind:class="{ ready: CheckReady }" type="submit" value="Submit">
+        </div>
+        {{mailCheck}}
+        {{passCheck}}
+        {{confirmCheck}}
+        {{mobileCheck}}
+        {{isReady}}
+    </form>
+</div>
+
+
+</body>
+<script src=" https://unpkg.com/vue"></script>
+<script src="js/custom.js"></script>
+
+</html>

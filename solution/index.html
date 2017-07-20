@@ -115,6 +115,11 @@
         <div class="submit-wrap">
             <input v-on:click.prevent="onSubmit()" v-bind:class="{ ready: CheckReady }" type="submit" value="Submit">
         </div>
+        {{mailCheck}}
+        {{passCheck}}
+        {{confirmCheck}}
+        {{mobileCheck}}
+        {{isReady}}
     </form>
 </div>
 

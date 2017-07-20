@@ -80,7 +80,7 @@ var app = new Vue({
             }
         },
         checkPass() {
-            if (this.pass.match(/^(?=.*[0-9])(?=.*[a-z])([a-z0-9]+)$/) || this.pass === '') {
+            if ((this.pass.match(/[0-9]/) && this.pass.match(/[a-z]/)) || this.pass === '') {
 
                 return false
             } else {
@@ -89,7 +89,7 @@ var app = new Vue({
             }
         },
         changePass() {
-            if (this.pass.match(/^(?=.*[0-9])(?=.*[a-z])([a-z0-9]+)$/)) {
+            if ((this.pass.match(/[0-9]/) && this.pass.match(/[a-z]/))) {
                 this.passCheck = this.pass;
 
             } else {

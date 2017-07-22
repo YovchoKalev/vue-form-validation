@@ -50,7 +50,7 @@ var app = new Vue({
             this.mail.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/) ? this.mailCheck = true : this.mailCheck = false
         },
         checkPhone() {
-            return this.phone.match(/^[0-9]*$/) || this.phone === ''
+            return this.phone.match(/^\d+$/) || this.phone === ''
         },
         changePhone() {
             this.phone.match(/^\d+$/) ? this.mobileCheck = true : this.mobileCheck = false

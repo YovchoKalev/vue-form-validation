@@ -44,76 +44,28 @@ var app = new Vue({
             }
         },
         checkMail() {
-            if (this.mail.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/) || this.mail === '') {
-
-                return false
-            } else {
-
-                return true
-            }
+            return this.mail.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/) || this.mail === ''
         },
         changeMail() {
-            if (this.mail.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)) {
-                this.mailCheck = true
-
-            } else {
-                this.mailCheck = false
-
-            }
+            this.mail.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/) ? this.mailCheck = true : this.mailCheck = false
         },
         checkPhone() {
-            if (this.phone.match(/^[0-9]*$/) || this.phone === '') {
-
-                return false
-            } else {
-
-                return true
-            }
+            return this.phone.match(/^[0-9]*$/) || this.phone === ''
         },
         changePhone() {
-            if (this.phone.match(/^[0-9]*$/)) {
-                this.mobileCheck = true
-
-            } else {
-                this.mobileCheck= false
-
-            }
+            this.phone.match(/^\d+$/) ? this.mobileCheck = true : this.mobileCheck = false
         },
         checkPass() {
-            if ((this.pass.match(/[0-9]/) && this.pass.match(/[a-z]/)) || this.pass === '') {
-
-                return false
-            } else {
-
-                return true
-            }
+            return (this.pass.match(/[0-9]/) && this.pass.match(/[a-z]/)) || this.pass === ''
         },
         changePass() {
-            if ((this.pass.match(/[0-9]/) && this.pass.match(/[a-z]/))) {
-                this.passCheck = this.pass;
-
-            } else {
-                this.passCheck = false
-
-            }
+            (this.pass.match(/[0-9]/) && this.pass.match(/[a-z]/)) ? this.passCheck = this.pass : this.passCheck = false
         },
         checkConfirm() {
-            if (this.confirm === this.pass || this.pass === '') {
-
-                return false
-            } else {
-
-                return true
-            }
+            return this.confirm === this.pass || this.pass === ''
         },
         changeConfirm() {
-            if (this.confirm === this.pass) {
-                this.confirmCheck = true
-
-            } else {
-                this.confirmCheck = false
-
-            }
+            this.confirm === this.pass ? this.confirmCheck = true : this.confirmCheck = false
         }
     },
     computed: {

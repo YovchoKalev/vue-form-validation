@@ -70,7 +70,7 @@ var app = new Vue({
     },
     computed: {
         CheckReady() {
-            if (this.mailCheck && this.passCheck && this.confirmCheck && this.checkbox && this.mobileCheck) {
+            if (this.mailCheck && this.passCheck && this.confirmCheck && this.checkbox) {
                 this.isReady = true;
                 return true
             } else {
